@@ -2,7 +2,18 @@
 #      Attention si la chaîne est invalide, un message d'erreur est attendu.
 
 country = input("Pays concerné ? ")
-code_medals = input("Chaine représentant les médailles ? ")
+chaine_valide = True
+while(chaine_valide != True):
+    code_medals = input("Chaine représentant les médailles ? ")
+    for c in code_medals:
+        x=0
+        if c == "G" or c=="B" or c=="S":
+            x += 1
+    if x== len(chaine_valide):
+        chaine_valide = True
+    
+
+
 for c in code_medals:
     gold_medals = code_medals.count("G");
     silver_medals = code_medals.count("S");
